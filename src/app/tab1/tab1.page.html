@@ -1,17 +1,48 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>TaskFlow: Mis Tareas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Tareas</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list lines="full">
+    <ion-list-header>
+      <ion-label>Pendientes de hoy</ion-label>
+    </ion-list-header>
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>
+          <h2>Diseñar Interfaz MVP</h2>
+          <p>Crear el layout base en Ionic para la entrega de mañana.</p>
+          <ion-badge color="danger">Prioridad: Alta</ion-badge>
+        </ion-label>
+        <ion-note slot="end" color="medium">Pendiente</ion-note>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success">Completar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item>
+      <ion-label>
+        <h2>Configurar Repositorio</h2>
+        <p>Sincronización inicial con el equipo.</p>
+        <ion-badge color="warning">Prioridad: Media</ion-badge>
+      </ion-label>
+      <ion-note slot="end" color="success">Terminado</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
